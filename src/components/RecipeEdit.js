@@ -47,9 +47,10 @@ export default function RecipeEdit() {
       </div>
       <br />
       <label className='recipe-edit__label'>Ingredients</label>
-      <div className='recipe-edit__grid'>
+      <div className='recipe-edit__ingredient-grid'>
         <div>Name</div>
         <div>Amount</div>
+        <div></div>
         <RecipeIngredientEdit />
         <RecipeIngredientEdit />
       </div>

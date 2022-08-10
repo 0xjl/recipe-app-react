@@ -13,7 +13,7 @@
   text-align: end;
 }
 
-.recpe-edit__remove-button {
+.recipe-edit__remove-button {
   padding: 0;
   background: none;
   outline: none;
@@ -33,7 +33,7 @@
 }
 
 .recipe-edit__input {
-  border: 1pxs solid black;
+  border: 1px solid black;
   border-radius: 5px;
   font-size: inherit;
   padding: 5px 10px;
@@ -57,4 +57,11 @@ textarea.recipe-edit__input {
 .recipe-edit__add-ingredient-btn-container {
   margin-top: 20px;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .recipe-edit__details-grid,
+  .recipe-edit__ingredient-grid {
+    grid-template-columns: 1fr;
+  }
 }
