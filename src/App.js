@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
-import Counter from './Counter';
-import CounterHooks from './CounterHooks';
-
-export const ThemeContext = React.createContext();
+import React from 'react';
+import RecipeList from './RecipeList';
 
 function App() {
-  const [theme, setTheme] = useState('green');
-  return (
-    <ThemeContext.Provider value={{ backgroundColor: theme }}>
-      Counter in Counter.js
-      <Counter initialCount={0} />
-      Counter Hooks in CounterHooks.js
-      <CounterHooks initialCount={3} />
-      <button
-        onClick={() => {
-          setTheme((prevTheme) => {
-            return prevTheme === 'red' ? 'blue' : 'red';
-          });
-        }}>
-        Toggle Theme
-      </button>
-    </ThemeContext.Provider>
-  );
+  return <RecipeList recipes={sampleRecipes} />;
 }
+
+const sampleRecipes = [
+  {
+    id: 1,
+    name: 'Plain Chicken',
+    servings: 3,
+    cookTime: '1:45',
+    instructions:
+      '1. Put salt on chicken\n2. Put chicken in oven\n3. eat the chicken',
+  },
+  {
+    id: 2,
+    name: 'Plain Pork',
+    servings: 5,
+    cookTime: '0:45',
+    instructions: '1. Paprika on Pork\n2. Put Pork in oven\n3. eat the pork',
+  },
+];
 
 export default App;
